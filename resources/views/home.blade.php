@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <h1 class="text-center text-5xl">Treni odierni</h1>
 
