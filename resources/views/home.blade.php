@@ -15,7 +15,14 @@
         <h1 class="text-center text-5xl">Treni odierni</h1>
 
         <section class="trains">
-
+            @foreach ($trains as $train)
+                <div class="train">
+                    <h2>{{ $train->company }}</h2>
+                    <h3>{{ $train->departure_station }} - {{ $train->arrival_station }}</h3>
+                    <p>Partenza: {{ $train->departure_time }}</p>
+                    <p>Arrivo: {{ $train->arrival_time }}</p>
+                </div>
+            @endforeach
         </section>
 
     </div>

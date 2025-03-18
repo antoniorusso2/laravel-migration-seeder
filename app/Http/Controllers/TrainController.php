@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Train;
 use Illuminate\Http\Request;
 
-class TrainsController extends Controller
+class TrainController extends Controller
 {
     public function index()
     {
-        $trains = Train::all();
+
+        $trains = Train::where('departure_time', '>=', now())->get();
+
 
         return view('home', compact('trains'));
     }
