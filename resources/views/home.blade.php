@@ -16,7 +16,7 @@
 
         <section class="trains">
             @foreach ($trains as $train)
-                <div class="train">
+                <div class="train card">
                     <h2>{{ $train->company }}</h2>
                     <h3>{{ $train->departure_station }} - {{ $train->arrival_station }}</h3>
                     <p>Partenza: {{ $train->departure_time }}</p>

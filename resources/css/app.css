@@ -1,2 +1,10 @@
 @import "tailwindcss";
 /* @source "../views"; */
+
+.container {
+    @apply max-w-6xl mx-auto sm:px-6 lg:px-8 my-2;
+}
+
+.card {
+    @apply bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 my-5 border-1 border-gray-200;
+}
