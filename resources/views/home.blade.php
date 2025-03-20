@@ -22,6 +22,8 @@
                     <div class="times my-3">
                         <p class="font-thin">Partenza: {{ $train->departure_time }}</p>
                         <p class="font-thin">Arrivo: {{ $train->arrival_time }}</p>
+                        <p class="font-thin">Codice treno: <strong
+                                class="font-bold text">{{ strtoupper($train->train_code) }}</strong></p>
                     </div>
 
                     <div class="available_seats">
