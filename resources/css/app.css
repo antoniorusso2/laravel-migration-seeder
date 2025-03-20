@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import "tailwindcss";
 
 .container {
     @apply max-w-6xl mx-auto sm:px-6 lg:px-8 my-2;
