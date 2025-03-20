@@ -18,19 +18,19 @@ class TrainsTableSeeder extends Seeder
 
         foreach (range(1, 10) as $train) {
 
-            $newTrain = new Train([
-                'company' => $faker->company(),
-                'departure_station' => $faker->city(),
-                'arrival_station' => $faker->city(),
-                'departure_time' => $faker->dateTimeBetween('now', '+1 year', 'Europe/Rome'),
-                'arrival_time' => $faker->dateTimeBetween('now', '+1 year', 'Europe/Rome'),
-                'train_code' => $faker->unique()->ean13(),
-                'number_of_carriages' => $faker->numberBetween(5, 10),
-                'capacity' => 1000,
-                'reserved_seats' => $faker->numberBetween(0, 1000),
-                'in_time' => $faker->boolean(),
-                'cancelled' => $faker->boolean(),
-            ]);
+            $newTrain = new Train();
+
+            $newTrain->company = $faker->company;
+            $newTrain->departure_station = $faker->city();
+            $newTrain->arrival_station = $faker->city();
+            $newTrain->departure_time = $faker->dateTimeBetween('now', '+1 day');
+            $newTrain->arrival_time = $faker->dateTimeBetween($newTrain->departure_time, '+1 day');
+            $newTrain->train_code = $faker->bothify('??-####');
+            $newTrain->number_of_carriages = $faker->numberBetween(10, 20);
+            $newTrain->capacity = 800;
+            $newTrain->reserved_seats = $faker->numberBetween(200, 800);
+            $newTrain->in_time = $faker->boolean;
+            $newTrain->cancelled = $faker->boolean;
 
             $newTrain->save();
         }
