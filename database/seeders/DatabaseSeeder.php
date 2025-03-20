@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(TrainsSeeder::class);
+        $this->call(TrainsTableSeeder::class);
     }
 }
